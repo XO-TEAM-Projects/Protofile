@@ -15,4 +15,5 @@ const menu = document.querySelector(".div2 ul");
 hamburger.addEventListener("click", () => {
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 });
-
+const cards = document.getElementById("cards");
+    cards.innerHTML += cards.innerHTML;

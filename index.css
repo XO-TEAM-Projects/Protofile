@@ -154,6 +154,7 @@ background-image: linear-gradient(
 .information .top .left h3{
   font-size: 72px;
   font-weight: 600;
+  margin: 0;
   width: 100%;
 }
 .information .top .left p{
@@ -163,13 +164,15 @@ background-image: linear-gradient(
   line-height: 1.5;
 }
 .information .top .right{
-  width: 80%;
+  width: 50%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .information .top .right img{
+  
   width: 100%;
   height: auto;
 
@@ -184,6 +187,9 @@ background-image: linear-gradient(
   display: flex;
   padding: 20px;
     position: relative;
+    
+    box-shadow: #061830 0px 10px 20px -5px;
+
 }
 .down .iconsLeft{
   width: 10%;
@@ -304,6 +310,408 @@ padding: 100px;
   border-radius: 5px;
   margin-top: 20px;
 }
+.members{
+  width: 100%;
+  height: auto;
+  padding: 20px 40px;
+  background-color: #FFF8F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.members .infoMembers{
+  margin-top: 200px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.members .infoMembers h2{
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #061830;
+}
+.members .infoMembers p{
+  width: 60%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #87909D;
+  
+  line-height: 1.5;
+}
+.slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 20px;
+    }
+.members .cards{
+  
+display: flex;
+width: max-content;
+gap: 20px;
+      animation: scroll 30s linear infinite;
+}
+.members .cards .card{
+  width: 250px;
+  height: auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0px 20px;
+ box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+.members .cards .card img{
+width: 200px;   /* العرض الثابت */
+  height: 200px;  /* الطول الثابت */
+  object-fit: cover; /* يخلي الصورة تنقص/تكبر بدون تشويه */
+  border-radius: 10px; /* اختياري: يعطي حواف ناعمة */
+}
+    .card:hover {
+      transform: scale(1.05);
+    }
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+.last{
+  width: 100%;
+  height: auto;
+  background-color: #061830;
+padding-top: 40px ;
+
+}
+.last .project{
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.last .project h5{
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.last .project p{
+  width: 60%;
+  color: silver;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.last .project .projects{
+  margin: 10px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.last .project .projects .projectCard{
+  width: 400px;
+  height: 400px;
+  background-color: #FFF8F0;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 10px 0;
+ box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+.last .project .projects .projectCard img{
+width: 100%;
+height: 300px;
+margin-bottom: 10px;
+}
+    .projectCard:hover {
+      transform: scale(1.05);
+    }
+    .last .project .projects .projectCard h4{
+      font-size: 22px;
+      font-weight: 600;
+      margin: 5px 0;
+      padding: 10px;
+    
+    }
+    .last .project .projects .projectCard p{
+      width: 100%;
+      font-size: 16px;
+      font-weight: 300;
+      color: #555;
+      text-align: center;
+      line-height: 1.5;
+ 
+    }
+.services{
+  width: 100%;
+height: auto;
+margin-top: 80px;
+  display: flex;
+  padding: 40px;
+  border: none;
+background-image: linear-gradient(
+  to bottom right,
+  rgba(82, 142, 229, 0.3) 0%,   /* أحمر صغير */
+  #061830 20%,                 /* الأزرق الداكن يبدأ يسيطر بدري */
+  #061830 80%,                 /* الأزرق الداكن يضل أغلب الشاشة */
+  rgba(207, 27, 24, 0.8)100% /* الأزرق الفاتح يا دوب يظهر في الزاوية */
+);
+}
+.services .leftServices{
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  color: #FFF8F0;
+}
+.services .leftServices h5{
+  font-size: 48px;
+  margin: 0;
+  font-weight: 700;
+
+}
+.services .leftServices p{
+  width: 100%;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+.services .rightServices{
+margin-top: 40px;
+  width: 70%;
+  height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+.services .rightServices .box{
+  padding: 30px;
+  width: 312px;
+  height: 276px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+.box1{
+  transform: translateY(-20px);
+}
+.services .rightServices .box h4{
+  color: #132238;
+  font-size: 20px;
+  font-weight:700;
+  line-height: 24px;
+}
+.services .rightServices .box p{
+  color:#556070 ;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.services .rightServices .box11 .imageIcon{
+  background-color: #528EE5;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.services .rightServices .box12 .imageIcon{
+  background-color: #528EE580;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.services .rightServices .box .imageIcon img{
+  width: 35px;
+  height: 35px;
+}
+.achievements{
+  width: 100%;
+  height: auto;
+  background-color: #FFF8F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.achievements h4{
+  font-size: 48px;
+  font-weight: 700;
+  color: #0C1E34;
+  line-height: 56px;
+}
+.achievements p{
+  font-size: 32px;
+  color: #87909D;
+  line-height: 45px;
+  font-weight: 400;
+  width: 70%;
+  text-align: center;
+  margin: 0;
+}
+.lastAchievements{
+  margin-bottom: 50px;
+margin-top: 20px;
+display: flex;
+justify-content: start;
+padding: 30px;
+border-radius: 16px;
+width: 70%;
+height: 500px;
+background-color: #FFFFFF;
+}
+.leftAchievements img {
+border-radius: 16px;
+}
+.rightAchievements{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+ text-align: left;
+}
+.rightAchievements h4{
+  font-size: 40px;
+  font-weight: 700;
+  color: #0C1E34;
+  line-height: 56px;
+  padding: 4px;
+}
+.rightAchievements p{
+  font-size: 30px;
+  width: 100%;
+  word-break:keep-all;
+}
+.contact{
+  box-shadow: #061830 0px -1px 40px 0px ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-image: linear-gradient(
+  to top right,
+   rgba(207, 27, 24, 0.8)10% ,   /* أحمر صغير */
+  #061830 ,                 /* الأزرق الداكن يبدأ يسيطر بدري */
+  #061830             /* الأزرق الداكن يضل أغلب الشاشة */
+  /* الأزرق الفاتح يا دوب يظهر في الزاوية */
+);
+
+}
+.contact h4{
+  width: 35%;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color:white ;
+}
+.social{
+margin-bottom: 40px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.media{
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: wheat 1px 1px 10px 1px ;
+  transition: all 1s ease-in-out  ;
+}
+.media  img{
+  width: 40%;
+  height: auto;
+}
+.media:hover {
+      transform: scale(1.05);
+    }
+    footer{
+      width: 100%;
+      height: auto;
+      background-color:#2B384C;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      justify-content: space-around;
+    height: 90px;
+    }
+    footer .onepart{
+      width: 90%;
+      display: flex;
+      gap: 1px;
+    }
+    footer .onepart h4{
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    footer .onepart img{
+      width: 100px;
+      height: 100px;
+
+    }
+    footer .twopart{
+      width: 100%;
+    }
+    footer .twopart ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    footer .twopart ul li{
+      padding: 30px;
+    }
+    footer .threepart{
+      width: 100%;
+    }
+    footer .threepart h4{
+      font-size: 20px;
+      width: 100%;
+    }
 /* ================== Media Queries ================== */
 
 /* للشاشات الصغيرة 768px أو أقل */
