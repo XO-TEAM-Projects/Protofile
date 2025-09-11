@@ -2,6 +2,7 @@ const container1 = document.querySelector(".container1");
 const container2 = document.querySelector(".container2");
 
 // بعد انتهاء fadeOut للـ container1
+
 container1.addEventListener("animationend", (e) => {
   if (e.animationName === "fadeOut") {
     container1.style.display = "none"; // نخفي الأول
