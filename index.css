@@ -301,12 +301,13 @@ padding: 100px;
 }
 
 .contaet2{
-  width: 80%;
+  width: 100%;
   height:auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  
+ 
 
 }
 .container2 .information .top .left button{
