@@ -299,6 +299,16 @@ padding: 100px;
   width: 100%;
   height: auto;
 }
+
+.contaet2{
+  width: 80%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+}
 .container2 .information .top .left button{
   width: 150px;
   height: auto;
