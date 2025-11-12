@@ -85,7 +85,9 @@ nav .div2 {
   display: flex;
   justify-content: flex-end;
 }
-
+nav .div2 ul :hover{
+  color: #CF1B18;
+}
 nav .div2 ul {
   display: flex;
   gap: 40px;
@@ -111,6 +113,11 @@ button {
   color: white;
   font-weight: 500;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+button:hover{
+  transform: scale(1.04);
+  background-color: #132238;
 }
 
 li a {
@@ -300,16 +307,33 @@ padding: 100px;
   height: auto;
 }
 
-.contaet2{
-  width: 100%;
-  height:auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
- 
 
+
+.contaet2 {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 27px; 
+  padding: 40px;
+   background-color: #FFF8F0;
+ 
 }
+
+.contaet2 img {
+  width: 330px; 
+  height: 300px;
+  object-fit: cover;
+  border-radius: 25px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+ 
+}
+
+.contaet2 img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
 .container2 .information .top .left button{
   width: 150px;
   height: auto;
@@ -661,8 +685,8 @@ margin-bottom: 40px;
   margin-bottom: 80px;
 }
 .media{
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   background-color: white;
   border-radius: 16px;
   display: flex;
