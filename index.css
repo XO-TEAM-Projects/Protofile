@@ -2,8 +2,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
-  overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* container1 */
@@ -39,7 +46,7 @@ h2 {
 .container2 {
   width: 100%;
   height: 100vh;
-  opacity: 0; /* مخفي بالبداية */
+  opacity: 0; 
   transition: opacity 1s ease;
 }
 
@@ -64,7 +71,7 @@ nav {
   align-items: center;
   padding: 10px 20px;
   background-color: #061830;
-  flex-wrap: wrap; /* للسماح بالانكسار */
+  flex-wrap: wrap; 
 }
 
 nav .div1 {
@@ -138,10 +145,10 @@ height:auto;
 color: white;
 background-image: linear-gradient(
   to top right,
-  rgba(207, 27, 24, 0.8) 0%,   /* أحمر صغير */
-  #061830 7%,                 /* الأزرق الداكن يبدأ يسيطر بدري */
-  #061830 93%,                 /* الأزرق الداكن يضل أغلب الشاشة */
-  rgba(82, 142, 229, 0.3) 100% /* الأزرق الفاتح يا دوب يظهر في الزاوية */
+  rgba(207, 27, 24, 0.8) 0%,  
+  #061830 7%,                
+  #061830 93%,                
+  rgba(82, 142, 229, 0.3) 100% 
 );
 }
 .information .top {
@@ -194,7 +201,7 @@ background-image: linear-gradient(
   display: flex;
   padding: 20px;
     position: relative;
-    
+    overflow: hidden;
     box-shadow: #061830 0px 10px 20px -5px;
 
 }
@@ -703,131 +710,577 @@ margin-bottom: 40px;
 .media:hover {
       transform: scale(1.05);
     }
-    footer{
-      width: 100%;
-      height: auto;
-      background-color:#2B384C;
-      display: flex;
-      flex-direction: row;
-      padding: 20px;
-      justify-content: space-around;
-    height: 90px;
-    }
-    footer .onepart{
-      width: 90%;
-      display: flex;
-      gap: 1px;
-    }
-    footer .onepart h4{
-      color: #FFFFFF;
-      font-size: 32px;
-      font-weight: 600;
-      line-height: 30px;
-    }
-    footer .onepart img{
-      width: 100px;
-      height: 100px;
 
-    }
-    footer .twopart{
-      width: 100%;
-    }
-    footer .twopart ul{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    footer .twopart ul li{
-      padding: 30px;
-    }
-    footer .threepart{
-      width: 100%;
-    }
-    footer .threepart h4{
-      font-size: 20px;
-      width: 100%;
-    }
-/* ================== Media Queries ================== */
+    footer {
+  background-color: #2d3a4a; /* نفس لون الخلفية في الصورة */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-family: 'Poppins', sans-serif;
+}
 
-/* للشاشات الصغيرة 768px أو أقل */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+footer .onepart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .onepart img {
+  width: 60px;
+  height: auto;
+}
+
+footer .onepart h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+footer .twopart ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+footer .twopart ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+footer .twopart ul li a:hover {
+  color: #00c8ff; /* لون التفاعل */
+}
+
+footer .threepart h4 {
+  color: #bfc7d0;
+  font-size: 16px;
+  text-align: right;
+  max-width: 320px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
   }
 
+  footer .twopart ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  footer .threepart h4 {
+    text-align: center;
+  }
+}
+
+/* ================== Media Queries ================== */
+
+/* General responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 1200px and below */
+@media (max-width: 1200px) {
+  .information .top .left h3 {
+    font-size: 4rem;
+  }
+  .information .top .left p {
+    font-size: 1.4rem;
+  }
+  .last .project h5 {
+    font-size: 3rem;
+  }
+  .last .project p {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+  .services .leftServices h5 {
+    font-size: 3rem;
+  }
+  .services .leftServices p {
+    font-size: 1.8rem;
+  }
+  .achievements h4 {
+    font-size: 3rem;
+  }
+  .achievements p {
+    font-size: 1.8rem;
+  }
+  .contact h4 {
+    font-size: 3rem;
+  }
+  .lastAchievements {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .rightAchievements h4 {
+    font-size: 2rem;
+  }
+  .rightAchievements p {
+    font-size: 1rem;
+  }
+}
+
+/* 900px and below */
+@media (max-width: 900px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    padding: 10px 15px;
   }
-
   nav .div1, nav .div2 {
     width: 100%;
     justify-content: space-between;
   }
-
   nav .div2 ul {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
+    gap: 20px;
   }
-
+  nav .div1 h2 {
+    font-size: 1.3rem;
+  }
+  nav .div1 img {
+    width: 100px;
+  }
   button {
     width: 100%;
     text-align: center;
   }
+  .information .top {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .information .top .left {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .information .top .left h3 {
+    font-size: 3rem;
+  }
+  .information .top .left p {
+    font-size: 1.2rem;
+  }
+  .information .top .right {
+    width: 100%;
+  }
+  .down {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .down .iconsLeft, .down .iconsRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .down .infoCenter {
+    width: 100%;
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+  .contaet2 {
+    padding: 20px;
+    gap: 20px;
+  }
+  .contaet2 img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .members {
+    padding: 20px;
+  }
+  .members .infoMembers h2 {
+    font-size: 2rem;
+  }
+  .members .infoMembers p {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .members .cards .card {
+    width: 200px;
+    padding: 15px;
+  }
+  .members .cards .card img {
+    width: 150px;
+    height: 150px;
+  }
+  .last .project h5 {
+    font-size: 2.5rem;
+  }
+  .last .project p {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .last .project .projects .projectCard {
+    width: 300px;
+    height: auto;
+  }
+  .last .project .projects .projectCard img {
+    height: 200px;
+  }
+  .services {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .services .leftServices {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .services .leftServices h5 {
+    font-size: 2.5rem;
+  }
+  .services .leftServices p {
+    font-size: 1.5rem;
+  }
+  .services .rightServices {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .services .rightServices .box {
+    width: 100%;
+    max-width: 300px;
+  }
+  .achievements h4 {
+    font-size: 2.5rem;
+  }
+  .achievements p {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .lastAchievements {
+    width: 95%;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .leftAchievements img {
+    width: 100%;
+    height: auto;
+  }
+  .rightAchievements {
+    padding: 20px 0;
+  }
+  .rightAchievements h4 {
+    font-size: 1.8rem;
+  }
+  .rightAchievements p {
+    font-size: 1rem;
+  }
+  .contact h4 {
+    width: 80%;
+    font-size: 2.5rem;
+  }
+  .social {
+    width: 90%;
+    gap: 30px;
+  }
+  .media {
+    width: 80px;
+    height: 80px;
+  }
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  footer .onepart, footer .twopart, footer .threepart {
+    width: 100%;
+    text-align: center;
+  }
+  footer .twopart ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+  footer .twopart ul li {
+    padding: 10px;
+  }
 }
 
-/* للشاشات الصغيرة جداً 480px أو أقل */
-@media (max-width: 480px) {
+/* 750px and below */
+@media (max-width: 750px) {
+  h1 {
+    font-size: 3rem;
+  }
+  nav .div2 ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .information .top .left h3 {
+    font-size: 2.5rem;
+  }
+  .information .top .left p {
+    font-size: 1rem;
+  }
+  .down .infoCenter {
+    padding: 20px;
+  }
+  .contaet2 img {
+    max-width: 250px;
+  }
+  .members .cards .card {
+    width: 180px;
+  }
+  .members .cards .card img {
+    width: 120px;
+    height: 120px;
+  }
+  .last .project .projects .projectCard {
+    width: 250px;
+  }
+  .services .rightServices .box {
+    max-width: 250px;
+  }
+  .achievements h4 {
+    font-size: 2rem;
+  }
+  .achievements p {
+    font-size: 1.2rem;
+  }
+  .contact h4 {
+    font-size: 2rem;
+  }
+  .social {
+    gap: 20px;
+  }
+  .media {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* 450px and below */
+@media (max-width: 450px) {
   h1 {
     font-size: 2rem;
   }
-
-  nav .div1 h2 {
-    font-size: 1.2rem;
+  nav {
+    padding: 10px;
   }
-
+  nav .div1 h2 {
+    font-size: 1.1rem;
+  }
   nav .div2 ul {
     gap: 10px;
     font-size: 1rem;
   }
-
   nav .div1 img {
-    width: 100px;
+    width: 80px;
   }
-}
-/* للشاشات المتوسطة 900px أو أقل */
-@media (max-width: 1080px) {
-  nav {
-    flex-direction: row; /* تجعل العناصر تصطف عمودياً */
- 
+  .information .top .left {
+    padding: 20px 10px;
+  }
+  .information .top .left h3 {
+    font-size: 2rem;
+  }
+  .information .top .left p {
+    font-size: 0.9rem;
+  }
+  .down .infoCenter {
+    padding: 15px;
+  }
+  .contaet2 {
+    padding: 15px;
     gap: 15px;
   }
-
-  nav .div1, nav .div2 {
-    width: 100%; /* كل div ياخد عرض كامل */
-    justify-content: space-between;
+  .contaet2 img {
+    max-width: 200px;
   }
-
-  nav .div2 ul {
-  flex-direction: row; 
-  flex-wrap: wrap;
-  /* تجعل القائمة عمودية */
-    justify-content: space-between;
+  .members {
+    padding: 15px;
+  }
+  .members .infoMembers h2 {
+    font-size: 1.8rem;
+  }
+  .members .infoMembers p {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .members .cards .card {
+    width: 150px;
+    padding: 10px;
+  }
+  .members .cards .card img {
+    width: 100px;
+    height: 100px;
+  }
+  .last .project h5 {
+    font-size: 2rem;
+  }
+  .last .project p {
+    font-size: 1.2rem;
+  }
+  .last .project .projects .projectCard {
+    width: 200px;
+  }
+  .last .project .projects .projectCard img {
+    height: 150px;
+  }
+  .services {
+    padding: 15px;
+  }
+  .services .leftServices {
+    padding: 20px 10px;
+  }
+  .services .leftServices h5 {
+    font-size: 2rem;
+  }
+  .services .leftServices p {
+    font-size: 1.2rem;
+  }
+  .services .rightServices .box {
+    max-width: 200px;
+    padding: 20px;
+  }
+  .achievements h4 {
+    font-size: 1.8rem;
+  }
+  .achievements p {
+    font-size: 1rem;
+  }
+  .lastAchievements {
     width: 100%;
+    padding: 15px;
   }
+  .rightAchievements h4 {
+    font-size: 1.5rem;
+  }
+  .rightAchievements p {
+    font-size: 0.9rem;
+  }
+  .contact h4 {
+    width: 90%;
+    font-size: 1.8rem;
+  }
+  .social {
+    width: 95%;
+    gap: 15px;
+  }
+  .media {
+    width: 50px;
+    height: 50px;
+  }
+  footer {
+    padding: 15px;
+  }
+  footer .onepart h4 {
+    font-size: 1.2rem;
+  }
+  footer .threepart h4 {
+    font-size: 0.8rem;
+  }
+}
 
+/* 300px and below */
+@media (max-width: 300px) {
+  h1 {
+    font-size: 1.5rem;
+  }
   nav .div1 h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
-
+  nav .div2 ul {
+    gap: 5px;
+    font-size: 0.9rem;
+  }
   nav .div1 img {
+    width: 60px;
+  }
+  .information .top .left h3 {
+    font-size: 1.5rem;
+  }
+  .information .top .left p {
+    font-size: 0.8rem;
+  }
+  .contaet2 img {
+    max-width: 150px;
+  }
+  .members .cards .card {
+    width: 120px;
+  }
+  .members .cards .card img {
+    width: 80px;
+    height: 80px;
+  }
+  .last .project .projects .projectCard {
+    width: 150px;
+  }
+  .services .rightServices .box {
+    max-width: 150px;
+  }
+  .achievements h4 {
+    font-size: 1.5rem;
+  }
+  .contact h4 {
+    font-size: 1.5rem;
+  }
+  .media {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 200px and below */
+@media (max-width: 200px) {
+  h1 {
+    font-size: 1rem;
+  }
+  nav .div1 h2 {
+    font-size: 0.8rem;
+  }
+  nav .div2 ul {
+    font-size: 0.8rem;
+  }
+  .information .top .left h3 {
+    font-size: 1.2rem;
+  }
+  .information .top .left p {
+    font-size: 0.7rem;
+  }
+  .contaet2 img {
+    max-width: 120px;
+  }
+  .members .cards .card {
     width: 100px;
   }
-
-  button {
-    width: 100%;
-    text-align: center;
+  .members .cards .card img {
+    width: 60px;
+    height: 60px;
+  }
+  .last .project .projects .projectCard {
+    width: 120px;
+  }
+  .services .rightServices .box {
+    max-width: 120px;
+  }
+  .achievements h4 {
+    font-size: 1.2rem;
+  }
+  .contact h4 {
+    font-size: 1.2rem;
+  }
+  .media {
+    width: 30px;
+    height: 30px;
   }
 }
